@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Codex 手机入口</title><link rel="stylesheet" href="/shell.css"></head>
+<body>
+  <section id="login" class="login-card">
+    <div class="logo">C</div><h1>连接你的 Codex</h1><p>查看和操作电脑上正在运行的 Codex 窗口。</p>
+    <form id="login-form"><label for="password">访问密码</label><input id="password" type="password" autocomplete="current-password" required maxlength="256"><button type="submit">登录</button><p id="login-error" role="alert"></p></form>
+  </section>
+  <main id="app" hidden>
+    <header><button id="sidebar" title="展开会话列表" aria-label="展开会话列表">☰</button><select id="targets" aria-label="选择 Codex 窗口"><option>等待 Codex 连接</option></select><strong id="layer-title" hidden></strong><button id="refresh" title="重新连接" aria-label="重新连接">↻</button><button id="logout">退出</button></header>
+    <div id="status" role="status">正在连接电脑上的 Codex…</div>
+    <iframe id="mirror" title="电脑上的 Codex 界面" sandbox="allow-same-origin"></iframe>
+    <div id="notice">操作会同步到电脑上的同一个窗口。</div>
+  </main>
+  <input id="upload-files" type="file" multiple hidden>
+  <script src="/client.js" defer></script>
+</body></html>

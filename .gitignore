@@ -1,0 +1,18 @@
+# Runtime data, credentials, uploads and local configuration
+**/private/
+**/.probe/
+**/node_modules/
+**/__pycache__/
+**/.venv/
+.env
+.env.*
+!.env.example
+*.log
+*.pid
+*.pem
+*.key
+*.pfx
+*.p12
+.ddns_go_config.yaml
+.DS_Store
+Thumbs.db
